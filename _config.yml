@@ -8,6 +8,9 @@ description: >-
 url: "https://egaprotocol.org"
 baseurl: ""
 
+# Google Analytics
+google_analytics: G-0N08FGCWLT
+
 author:
   name: MIRASTACK LABS Private Limited
   email: hello@egaprotocol.org
