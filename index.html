@@ -201,49 +201,39 @@ description: >-
     <div class="spec-block">
       <h3 class="spec-block-title">Normative Sections</h3>
       <p class="spec-block-desc">
-        The specification is organised into 20 normative sections plus 3 appendices.
-        Every message is schema-validated before dispatch.
+        20 normative sections, 3 appendices. Every message is schema-validated before dispatch.
       </p>
-      <ul class="spec-sections">
-        <li><span class="spec-sec-num">§4</span> Architectural Overview &mdash; Engine · Agent · Approver</li>
-        <li><span class="spec-sec-num">§5</span> Transport Bindings</li>
-        <li><span class="spec-sec-num">§6</span> Message Framing &amp; envelope</li>
-        <li><span class="spec-sec-num">§7</span> Core Message Types</li>
-        <li><span class="spec-sec-num">§8</span> Governance Metadata (identity · scope · audit · time · budget)</li>
-        <li><span class="spec-sec-num">§9</span> Authentication &amp; Identity</li>
-        <li><span class="spec-sec-num">§10</span> Authorization Model &mdash; READ · WRITE · MODIFY · ADMIN</li>
-        <li><span class="spec-sec-num">§11</span> Approval Flow &mdash; mandatory gate for destructive actions</li>
-        <li><span class="spec-sec-num">§12</span> Audit Event Schema &mdash; OpenTelemetry-compatible</li>
-        <li><span class="spec-sec-num">§13</span> Budget Enforcement &mdash; iterations · tools · tokens · wall-clock</li>
-        <li><span class="spec-sec-num">§14</span> Error Model</li>
-        <li><span class="spec-sec-num">§15</span> Session Lifecycle</li>
-        <li><span class="spec-sec-num">§16</span> Security Considerations</li>
-        <li><span class="spec-sec-num">§17</span> Versioning &amp; Compatibility</li>
-        <li><span class="spec-sec-num">§19</span> Conformance Criteria</li>
-      </ul>
+      <div class="spec-toc">
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#4-architectural-overview" target="_blank" rel="noopener"><span>§4</span> Architecture</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#5-transport-bindings" target="_blank" rel="noopener"><span>§5</span> Transports</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#6-message-framing" target="_blank" rel="noopener"><span>§6–7</span> Messaging</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#8-governance-metadata" target="_blank" rel="noopener"><span>§8</span> Governance&nbsp;Metadata</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#9-authentication" target="_blank" rel="noopener"><span>§9–10</span> Auth&nbsp;&amp;&nbsp;Authorization</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#11-approval-flow" target="_blank" rel="noopener"><span>§11</span> Approvals</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#12-audit-event-schema" target="_blank" rel="noopener"><span>§12</span> Audit</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#13-budget-enforcement" target="_blank" rel="noopener"><span>§13</span> Budgets</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#14-error-model" target="_blank" rel="noopener"><span>§14–15</span> Errors&nbsp;&amp;&nbsp;Sessions</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#16-security-considerations" target="_blank" rel="noopener"><span>§16</span> Security</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#17-versioning" target="_blank" rel="noopener"><span>§17</span> Versioning</a>
+        <a class="spec-toc-chip" href="https://github.com/egaprotocol/spec/blob/main/SPEC.md#19-conformance" target="_blank" rel="noopener"><span>§19</span> Conformance</a>
+      </div>
     </div>
 
     <!-- Envelope snippet -->
     <div class="spec-block">
-      <h3 class="spec-block-title">Governance Metadata — on every message</h3>
+      <h3 class="spec-block-title">Governance metadata — on every message</h3>
       <p class="spec-block-desc">
-        No "unauthenticated mode", no "skip audit" flag, no "approval bypass."
-        Every Action carries the full governance envelope.
+        No <em>unauthenticated mode</em>. No <em>skip-audit</em> flag. No <em>approval bypass</em>.
       </p>
       <pre class="spec-code" aria-label="EGAProtocol Action envelope example"><code>{
-  "jsonrpc": "2.0",
   "method": "egap.action.dispatch",
   "params": {
-    "action_id":      "act_01HK…",
-    "session_id":     "ses_01HK…",
-    "permission":     "WRITE",
-    "identity":       { "user_id": "…", "agent_id": "…", "sig": "…" },
-    "budget":         { "iterations": 12, "tools": 30, "tokens": 8000 },
-    "audit":          { "trace_id": "…", "span_id": "…" },
-    "approval":       { "required": true, "state": "PENDING" },
-    "parameters":     { … }
-  },
-  "id": "req_01HK…"
+    "permission": "WRITE",
+    "identity":   { "user_id": "…", "agent_id": "…", "sig": "…" },
+    "budget":     { "iterations": 12, "tools": 30, "tokens": 8000 },
+    "audit":      { "trace_id": "…", "span_id": "…" },
+    "approval":   { "required": true, "state": "PENDING" }
+  }
 }</code></pre>
     </div>
 
@@ -288,7 +278,7 @@ description: >-
         <span class="stack-badge stack-egap-badge">EGAP</span>
         <div class="stack-desc">
           <h4>Engine Governed Agents Protocol — MIRASTACK LABS</h4>
-          <p>How an orchestration engine dispatches, monitors, and audits agent actions — with identity, authorization, approvals, audit, and alerts enforced at the wire level.</p>
+          <p>How an orchestration engine dispatches, monitors, and audits agent actions — with authentication, authorization, approvals, audit, and alerts enforced at the wire level.</p>
         </div>
       </div>
     </div>

@@ -542,18 +542,18 @@ section:last-of-type { border-bottom: none; }
 
 .spec-meta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  margin-bottom: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 64px;
 }
 .spec-meta {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  background: var(--bg-card);
+  gap: 6px;
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
-  padding: 16px 20px;
+  padding: 18px 22px;
 }
 .spec-meta-label {
   font-family: var(--font-primary);
@@ -577,37 +577,37 @@ section:last-of-type { border-bottom: none; }
 }
 
 .spec-block {
-  margin-top: 40px;
-  padding-top: 32px;
+  margin-top: 64px;
+  padding-top: 48px;
   border-top: 1px dashed var(--border);
 }
 .spec-block:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .spec-block-title {
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .spec-block-desc {
   font-family: var(--font-primary);
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   max-width: 680px;
 }
 
 .spec-bindings {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
 }
 .spec-binding-card {
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
-  padding: 20px 22px;
+  padding: 22px 24px;
   transition: border-color 0.2s;
 }
 .spec-binding-card:hover { border-color: var(--accent-border); }
@@ -615,7 +615,7 @@ section:last-of-type { border-bottom: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 .spec-binding-tag {
@@ -628,7 +628,7 @@ section:last-of-type { border-bottom: none; }
   color: var(--accent);
   background: var(--accent-dim);
   border: 1px solid var(--accent-border);
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-sm);
 }
 .spec-binding-card h4 {
@@ -639,43 +639,53 @@ section:last-of-type { border-bottom: none; }
 }
 .spec-binding-card p {
   font-family: var(--font-primary);
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--text-secondary);
   line-height: 1.8;
+  margin-top: 6px;
 }
 
-.spec-sections {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 4px 16px;
+/* Normative-sections TOC as compact pill chips */
+.spec-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.spec-sections li {
+.spec-toc-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
   font-family: var(--font-primary);
   font-size: 12.5px;
   color: var(--text-secondary);
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  gap: 12px;
-  align-items: baseline;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
-.spec-sec-num {
+.spec-toc-chip:hover {
+  border-color: var(--accent-border);
+  color: var(--text-primary);
+  background: var(--accent-dim);
+}
+.spec-toc-chip span {
   font-weight: 700;
   color: var(--accent);
-  min-width: 36px;
-  flex-shrink: 0;
+  font-size: 11.5px;
+  letter-spacing: 0.3px;
 }
 
 .spec-code {
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
-  padding: 18px 22px;
+  padding: 20px 24px;
   overflow-x: auto;
   font-family: var(--font-primary);
-  font-size: 12px;
-  line-height: 1.75;
+  font-size: 12.5px;
+  line-height: 1.8;
   color: var(--text-primary);
 }
 .spec-code code {
@@ -690,7 +700,7 @@ section:last-of-type { border-bottom: none; }
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 56px;
 }
 
 /* ── Protocol Ecosystem ───────────────────────────────────── */
