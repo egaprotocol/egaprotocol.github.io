@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 44" role="img" aria-label="EGAProtocol">
   <title>EGAProtocol</title>
   <desc>EGAProtocol — the open protocol that brings discipline to AI agents. An open specification by MIRASTACK LABS.</desc>
-  <!-- Three-slat mark: horizontal-logo polygon geometry (height 52) scaled to 44px: scale=44/52=0.846 -->
-  <g transform="scale(0.846)">
+  <!-- Three-slat mark: scale(0.308) → height=16px matches JetBrains Mono cap-height at font-size 22.
+       Baseline y=30, cap-line y=14 → translate(0,14) aligns mark top with cap-line -->
+  <g transform="translate(0, 14) scale(0.308)">
     <polygon points="0,52 14,0 24,0 10,52" fill="#00C9B1"/>
     <polygon points="18,52 32,0 42,0 28,52" fill="#FF671F"/>
     <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
   </g>
-  <!-- Wordmark: single <text> with tspan flow so EGAP+rotocol are seamless -->
-  <text y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22"><tspan x="63" font-weight="700" letter-spacing="2" fill="#00C9B1">EGAP</tspan><tspan font-weight="400" letter-spacing="0.5" fill="#6B7480" dx="-2">rotocol</tspan></text>
+  <!-- Wordmark: mark right edge ≈18.5px + 8px gap → x=27 -->
+  <text y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22"><tspan x="27" font-weight="700" letter-spacing="2" fill="#00C9B1">EGAP</tspan><tspan font-weight="400" letter-spacing="0.5" fill="#6B7480" dx="-2">rotocol</tspan></text>
 </svg>
