@@ -1,48 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#070c18"/>
-      <stop offset="100%" style="stop-color:#0d1526"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="30%" r="50%">
-      <stop offset="0%" style="stop-color:rgba(69,128,230,0.20)"/>
-      <stop offset="100%" style="stop-color:rgba(69,128,230,0)"/>
+    <radialGradient id="glow" cx="40%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="rgba(0,201,177,0.14)"/>
+      <stop offset="100%" stop-color="rgba(0,201,177,0)"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Background — mira-bg-dark -->
+  <rect width="1200" height="630" fill="#090C10"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <!-- Border -->
-  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#1e3050" stroke-width="2"/>
-  <!-- Badge -->
-  <rect x="80" y="80" width="200" height="36" rx="18" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
-  <text x="180" y="104" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle" letter-spacing="1">EGAP v0.1 · DRAFT</text>
-  <!-- Title -->
-  <text x="80" y="220" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="62" font-weight="800" fill="#6fa0ff" letter-spacing="-2">EGAP</text>
-  <text x="282" y="220" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="62" font-weight="800" fill="#f4f8ff" letter-spacing="-2">rotocol</text>
+  <!-- Border — mira-border-dark -->
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#1C2230" stroke-width="1.5"/>
+
+  <!-- Three-slat mark (large): horizontal-logo polygons at scale 3.5 -->
+  <!-- Original height 52 → 182px; width 60 → 210px; translate right to x=880 -->
+  <g transform="translate(900, 224) scale(3.5)" opacity="0.12">
+    <polygon points="0,52 14,0 24,0 10,52" fill="#00C9B1"/>
+    <polygon points="18,52 32,0 42,0 28,52" fill="#FF671F"/>
+    <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
+  </g>
+
+  <!-- Badge — signal orange -->
+  <rect x="80" y="72" width="210" height="32" rx="4" fill="rgba(255,103,31,0.10)" stroke="rgba(255,103,31,0.25)" stroke-width="1"/>
+  <text x="185" y="94" font-family="JetBrains Mono, Courier New, monospace" font-size="12" font-weight="700" fill="#FF671F" text-anchor="middle" letter-spacing="2">EGAP v0.1 · DRAFT</text>
+
+  <!-- Three-slat mark (mid-size, visible) — placed before wordmark -->
+  <g transform="translate(80, 148) scale(2.8)">
+    <polygon points="0,52 14,0 24,0 10,52" fill="#00C9B1"/>
+    <polygon points="18,52 32,0 42,0 28,52" fill="#FF671F"/>
+    <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
+  </g>
+
+  <!-- Wordmark — "EGAP" teal bold + "rotocol" muted -->
+  <text x="262" y="236" font-family="JetBrains Mono, Courier New, monospace" font-size="72" font-weight="700" fill="#00C9B1" letter-spacing="4">EGAP</text>
+  <text x="568" y="236" font-family="JetBrains Mono, Courier New, monospace" font-size="72" font-weight="400" fill="#6B7480" letter-spacing="1">rotocol</text>
+
   <!-- Tagline -->
-  <text x="80" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" fill="#8aa3c8" font-weight="400">The open protocol that brings</text>
-  <text x="80" y="335" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" fill="#8aa3c8" font-weight="400">discipline to AI agents.</text>
-  <!-- Pillars -->
-  <g transform="translate(80, 400)">
-    <rect width="120" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
-    <text x="60" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Identity</text>
+  <text x="80" y="300" font-family="JetBrains Mono, Courier New, monospace" font-size="22" fill="#7A8694" font-weight="400" letter-spacing="0.5">The open protocol that brings discipline to AI agents.</text>
+
+  <!-- Primitive chips — teal, 4px radius, monospace uppercase -->
+  <g transform="translate(80, 360)">
+    <rect width="106" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <text x="53" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">IDENTITY</text>
   </g>
-  <g transform="translate(216, 400)">
-    <rect width="148" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
-    <text x="74" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Authorization</text>
+  <g transform="translate(200, 360)">
+    <rect width="144" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <text x="72" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUTHORIZATION</text>
   </g>
-  <g transform="translate(380, 400)">
-    <rect width="96" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
-    <text x="48" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Audit</text>
+  <g transform="translate(358, 360)">
+    <rect width="84" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <text x="42" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUDIT</text>
   </g>
-  <g transform="translate(492, 400)">
-    <rect width="116" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
-    <text x="58" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Approvals</text>
+  <g transform="translate(456, 360)">
+    <rect width="110" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <text x="55" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">APPROVALS</text>
   </g>
-  <g transform="translate(624, 400)">
-    <rect width="96" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
-    <text x="48" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Alerts</text>
+  <g transform="translate(580, 360)">
+    <rect width="84" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <text x="42" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">ALERTS</text>
   </g>
-  <!-- Attribution -->
-  <text x="80" y="555" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#506580">egaprotocol.org · Apache 2.0 · MIRASTACK LABS Private Limited</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="558" x2="1120" y2="558" stroke="#1C2230" stroke-width="1"/>
+
+  <!-- Attribution footer -->
+  <text x="80" y="584" font-family="JetBrains Mono, Courier New, monospace" font-size="13" fill="#4A5563" letter-spacing="0.5">egaprotocol.org · Apache 2.0 · An open specification by MIRASTACK LABS Private Limited</text>
 </svg>
