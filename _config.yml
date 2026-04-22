@@ -1,0 +1,64 @@
+title: EGAProtocol
+tagline: "The open protocol that brings discipline to AI agents."
+description: >-
+  EGAP is an open specification for governed communication between orchestration
+  engines and AI agents — identity, authorization, audit, approvals, and alerts
+  enforced at the wire level. Built for regulated industries.
+
+url: "https://egaprotocol.org"
+baseurl: ""
+
+author:
+  name: MIRASTACK LABS Private Limited
+  email: hello@egaprotocol.org
+
+# Social
+twitter:
+  username: egaprotocol
+  card: summary_large_image
+
+social:
+  name: EGAProtocol
+  links:
+    - https://github.com/egaprotocol
+    - https://twitter.com/egaprotocol
+
+# OG image (place a 1200×630 PNG at this path)
+image: /assets/img/og-image.png
+
+# Spec version
+spec_version: "0.1"
+spec_status: "Working Draft"
+spec_url: "https://github.com/egaprotocol/spec/blob/main/SPEC.md"
+github_org: "https://github.com/egaprotocol"
+contact_email: "hello@egaprotocol.org"
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github
+  - vendor
+  - node_modules

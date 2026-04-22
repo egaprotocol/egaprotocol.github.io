@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta -->
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+  <meta property="og:image" content="{{ site.image | prepend: site.url }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@{{ site.twitter.username }}" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="{{ site.image | prepend: site.url }}" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- jekyll-seo-tag (canonical, JSON-LD) -->
+  {% seo %}
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Primary navigation">
+      <a href="/" class="nav-brand" aria-label="EGAProtocol home">
+        <span class="brand-egap">EGAP</span><span class="brand-rotocol">rotocol</span>
+      </a>
+      <div class="nav-links">
+        <a href="{{ site.spec_url }}" class="nav-link" target="_blank" rel="noopener">Specification</a>
+        <a href="{{ site.github_org }}" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:{{ site.contact_email }}" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-egap">EGAP</span><span class="brand-rotocol">rotocol</span>
+          <p class="footer-tagline">The open protocol that brings discipline to AI agents.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Specification</h4>
+            <a href="{{ site.spec_url }}" target="_blank" rel="noopener">SPEC.md</a>
+            <a href="https://github.com/egaprotocol/spec/blob/main/GOVERNANCE.md" target="_blank" rel="noopener">Governance</a>
+            <a href="https://github.com/egaprotocol/spec/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a>
+            <a href="https://github.com/egaprotocol/spec/blob/main/EXPANSIONS.md" target="_blank" rel="noopener">Expansions</a>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <a href="{{ site.github_org }}" target="_blank" rel="noopener">GitHub Organization</a>
+            <a href="https://github.com/egaprotocol/spec/discussions" target="_blank" rel="noopener">Discussions</a>
+            <a href="https://github.com/egaprotocol/spec/issues" target="_blank" rel="noopener">Issues</a>
+            <a href="https://github.com/egaprotocol/spec/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:hello@egaprotocol.org">hello@egaprotocol.org</a>
+            <a href="mailto:security@egaprotocol.org">security@egaprotocol.org</a>
+            <a href="mailto:governance@egaprotocol.org">governance@egaprotocol.org</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          EGAProtocol is an open specification developed at
+          <strong>MIRASTACK LABS Private Limited</strong> and released under the
+          <a href="https://github.com/egaprotocol/spec/blob/main/LICENSE" target="_blank" rel="noopener">Apache License 2.0</a>.
+          Documentation is additionally available under
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY-4.0</a>.
+        </p>
+        <p class="footer-copy">Copyright &copy; 2026 MIRASTACK LABS Private Limited.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('nav-links--open');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070c18"/>
+      <stop offset="100%" style="stop-color:#0d1526"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(69,128,230,0.20)"/>
+      <stop offset="100%" style="stop-color:rgba(69,128,230,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Border -->
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#1e3050" stroke-width="2"/>
+  <!-- Badge -->
+  <rect x="80" y="80" width="200" height="36" rx="18" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+  <text x="180" y="104" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle" letter-spacing="1">EGAP v0.1 · DRAFT</text>
+  <!-- Title -->
+  <text x="80" y="220" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="62" font-weight="800" fill="#6fa0ff" letter-spacing="-2">EGAP</text>
+  <text x="282" y="220" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="62" font-weight="800" fill="#f4f8ff" letter-spacing="-2">rotocol</text>
+  <!-- Tagline -->
+  <text x="80" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" fill="#8aa3c8" font-weight="400">The open protocol that brings</text>
+  <text x="80" y="335" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" fill="#8aa3c8" font-weight="400">discipline to AI agents.</text>
+  <!-- Pillars -->
+  <g transform="translate(80, 400)">
+    <rect width="120" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
+    <text x="60" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Identity</text>
+  </g>
+  <g transform="translate(216, 400)">
+    <rect width="148" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
+    <text x="74" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Authorization</text>
+  </g>
+  <g transform="translate(380, 400)">
+    <rect width="96" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
+    <text x="48" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Audit</text>
+  </g>
+  <g transform="translate(492, 400)">
+    <rect width="116" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
+    <text x="58" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Approvals</text>
+  </g>
+  <g transform="translate(624, 400)">
+    <rect width="96" height="34" rx="17" fill="rgba(69,128,230,0.12)" stroke="rgba(69,128,230,0.3)" stroke-width="1"/>
+    <text x="48" y="23" font-family="monospace" font-size="13" fill="#6fa0ff" text-anchor="middle" font-weight="600">Alerts</text>
+  </g>
+  <!-- Attribution -->
+  <text x="80" y="555" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#506580">egaprotocol.org · Apache 2.0 · MIRASTACK LABS Private Limited</text>
+</svg>

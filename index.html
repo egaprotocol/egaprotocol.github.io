@@ -1,0 +1,302 @@
+---
+layout: default
+title: "EGAProtocol"
+description: >-
+  EGAP is an open specification for governed communication between orchestration
+  engines and AI agents — identity, authorization, audit, approvals, and alerts
+  enforced at the wire level. Built for regulated industries.
+---
+
+<!-- ── Hero ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">EGAP v0.1 — Working Draft</div>
+    <h1>The open protocol that brings discipline to AI agents.</h1>
+    <p class="hero-description">
+      EGAP defines the governance layer for AI agent systems. Every message carries identity.
+      Every action requires authorization. Every destructive operation triggers human approval.
+      Every decision is audited.
+    </p>
+    <div class="hero-pillars">
+      <span class="hero-pillar">Identity</span>
+      <span class="hero-pillar">Authorization</span>
+      <span class="hero-pillar">Audit</span>
+      <span class="hero-pillar">Approvals</span>
+      <span class="hero-pillar">Alerts</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://github.com/egaprotocol/spec/blob/main/SPEC.md"
+         class="btn btn-primary" target="_blank" rel="noopener">
+        Read the Specification →
+      </a>
+      <a href="https://github.com/egaprotocol"
+         class="btn btn-secondary" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Governance Gap ────────────────────────────────────── -->
+<section class="governance-gap">
+  <div class="container">
+    <p class="section-label">The Problem</p>
+    <h2 class="section-title">The governance gap in agent protocols.</h2>
+    <p class="section-lead">
+      AI agents are being deployed into production faster than the governance models around them
+      are maturing. The agent protocol landscape today solves for connectivity — not accountability.
+    </p>
+
+    <div class="protocol-table-wrap">
+      <table class="protocol-table" aria-label="Protocol governance comparison">
+        <thead>
+          <tr>
+            <th>Protocol</th>
+            <th>Author</th>
+            <th>Purpose</th>
+            <th>Governance Layer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>MCP</strong></td>
+            <td>Anthropic</td>
+            <td>Tools and context for LLMs</td>
+            <td><span class="badge-none">None specified</span></td>
+          </tr>
+          <tr>
+            <td><strong>A2A</strong></td>
+            <td>Google</td>
+            <td>Agent-to-agent interoperability</td>
+            <td><span class="badge-none">None specified</span></td>
+          </tr>
+          <tr class="egap-row">
+            <td><strong>EGAP</strong></td>
+            <td>MIRASTACK LABS</td>
+            <td>Engine-to-agent dispatch with governance</td>
+            <td><span class="badge-required">Required</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gap-callout">
+      MCP lets an LLM call a tool. A2A lets an agent call another agent.
+      Neither specifies how the calling party is authenticated, how the action is authorized,
+      how it is audited, how humans approve destructive operations, or how anomalies are alerted.
+      <br /><br />
+      For regulated industries — banking, healthcare, defense, government, critical infrastructure —
+      <strong>connectivity without governance is unshippable.</strong>
+      EGAP defines the governance layer.
+    </div>
+  </div>
+</section>
+
+<!-- ── Five Primitives ───────────────────────────────────── -->
+<section class="primitives">
+  <div class="container">
+    <p class="section-label">What EGAP Provides</p>
+    <h2 class="section-title">Five governance primitives. At the wire level.</h2>
+    <p class="section-lead">
+      EGAP enforces governance by default. Governance metadata is mandatory on every agentic action.
+      There is no "unauthenticated mode," no "skip audit" flag, no "approval bypass."
+    </p>
+    <div class="primitives-grid">
+      <div class="primitive-card">
+        <div class="primitive-icon">🔑</div>
+        <h3>Identity</h3>
+        <p>Cryptographically verifiable identity for every user, session, and agent. No anonymous dispatch.</p>
+      </div>
+      <div class="primitive-card">
+        <div class="primitive-icon">🛡️</div>
+        <h3>Authorization</h3>
+        <p>Role-based authorization scoped to the minimum required privilege. Permission scope carried on every message.</p>
+      </div>
+      <div class="primitive-card">
+        <div class="primitive-icon">📋</div>
+        <h3>Audit</h3>
+        <p>Immutable audit trails following OpenTelemetry semantic conventions. Every decision is recorded.</p>
+      </div>
+      <div class="primitive-card">
+        <div class="primitive-icon">✋</div>
+        <h3>Approvals</h3>
+        <p>Mandatory human-in-the-loop for every destructive or irreversible action. A protocol primitive, not an app convention.</p>
+      </div>
+      <div class="primitive-card">
+        <div class="primitive-icon">🔔</div>
+        <h3>Alerts</h3>
+        <p>Operational alerts when an agent deviates from expected behavior. Anomaly detection at the protocol boundary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Protocol Ecosystem ────────────────────────────────── -->
+<section class="ecosystem">
+  <div class="container">
+    <p class="section-label">Protocol Ecosystem</p>
+    <h2 class="section-title">Designed to complement, not compete.</h2>
+    <p class="section-lead">
+      A production governed agent system speaks all three protocols. EGAP adds the governance
+      layer that MCP and A2A deliberately leave out.
+    </p>
+    <div class="ecosystem-stack">
+      <div class="stack-item">
+        <span class="stack-badge stack-mcp">MCP</span>
+        <div class="stack-desc">
+          <h4>Model Context Protocol — Anthropic</h4>
+          <p>How large language models access tools and context.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-badge stack-a2a">A2A</span>
+        <div class="stack-desc">
+          <h4>Agent-to-Agent Protocol — Google</h4>
+          <p>How peer agents exchange messages and coordinate tasks.</p>
+        </div>
+      </div>
+      <div class="stack-item stack-egap">
+        <span class="stack-badge stack-egap-badge">EGAP</span>
+        <div class="stack-desc">
+          <h4>Engine Governed Agents Protocol — MIRASTACK LABS</h4>
+          <p>How an orchestration engine dispatches, monitors, and audits agent actions — with identity, authorization, approvals, audit, and alerts enforced at the wire level.</p>
+        </div>
+      </div>
+    </div>
+    <p class="ecosystem-note">
+      An engine can speak <strong>MCP</strong> to fetch tools, an agent can speak
+      <strong>A2A</strong> to coordinate with peers, and the engine-to-agent dispatch,
+      approval flow, and audit trail use <strong>EGAP</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- ── Who Implements ────────────────────────────────────── -->
+<section class="who-implements">
+  <div class="container">
+    <p class="section-label">Who It's For</p>
+    <h2 class="section-title">Built for regulated environments.</h2>
+    <p class="section-lead">
+      EGAP is designed for environments where an uncontrolled agentic action is measured
+      in millions, in lives, in national security, or in public trust.
+    </p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon">🏦</div>
+        <div>
+          <h4>Platform Teams</h4>
+          <p>Operating AI agents in BFSI, healthcare, defense, public sector, and critical infrastructure where governance is not optional.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🔧</div>
+        <div>
+          <h4>Vendors</h4>
+          <p>Building orchestration engines, agent SDKs, or agent marketplaces who need a governance contract with their customers' compliance teams.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏗️</div>
+        <div>
+          <h4>Enterprise Architects</h4>
+          <p>Defining organisational AI governance posture and needing an open standard to anchor it — one that survives vendor consolidation.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">⚖️</div>
+        <div>
+          <h4>Regulators &amp; Standards Bodies</h4>
+          <p>Seeking technically verifiable, evidence-based AI governance primitives with cryptographic certainty and immutable audit records.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🔬</div>
+        <div>
+          <h4>Researchers &amp; Practitioners</h4>
+          <p>Working on accountable, explainable, human-governed AI systems who need a concrete governance wire protocol to reason about.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Status + Get Involved ─────────────────────────────── -->
+<section class="status-involve">
+  <div class="container">
+    <div class="status-involve-grid">
+
+      <div class="status-card">
+        <div class="status-version">
+          <span>●</span> v0.1 — Working Draft
+        </div>
+        <h3>Specification Status</h3>
+        <p>
+          EGAProtocol v0.1 is published for community review and reference implementation.
+          The protocol is not yet ratified. Breaking changes are possible before v1.0.
+        </p>
+        <p>
+          All changes are proposed through the
+          <strong>EGAProtocol Improvement Proposal (EIP)</strong> process
+          defined in <a href="https://github.com/egaprotocol/spec/blob/main/GOVERNANCE.md"
+          target="_blank" rel="noopener">GOVERNANCE.md</a>.
+        </p>
+        <p>
+          Open source. <a href="https://github.com/egaprotocol/spec/blob/main/LICENSE"
+          target="_blank" rel="noopener">Apache License 2.0</a>.
+          Originally developed at <strong>MIRASTACK LABS Private Limited</strong>.
+        </p>
+        <br />
+        <a href="https://github.com/egaprotocol/spec/blob/main/SPEC.md"
+           class="btn btn-primary" target="_blank" rel="noopener">
+          Read the Specification →
+        </a>
+      </div>
+
+      <div class="status-card involve-card">
+        <h3>Get Involved</h3>
+        <div class="involve-links">
+          <a href="https://github.com/egaprotocol/spec/blob/main/SPEC.md"
+             class="involve-link" target="_blank" rel="noopener">
+            <span class="involve-link-icon">📄</span>
+            <span class="involve-link-text">
+              <strong>Read the specification</strong>
+              <span>SPEC.md on GitHub</span>
+            </span>
+          </a>
+          <a href="https://github.com/egaprotocol/spec/blob/main/GOVERNANCE.md"
+             class="involve-link" target="_blank" rel="noopener">
+            <span class="involve-link-icon">🗳️</span>
+            <span class="involve-link-text">
+              <strong>Propose a change</strong>
+              <span>EIP process via GOVERNANCE.md</span>
+            </span>
+          </a>
+          <a href="https://github.com/egaprotocol/spec/issues"
+             class="involve-link" target="_blank" rel="noopener">
+            <span class="involve-link-icon">🐛</span>
+            <span class="involve-link-text">
+              <strong>Report an issue</strong>
+              <span>GitHub Issues on egaprotocol/spec</span>
+            </span>
+          </a>
+          <a href="https://github.com/egaprotocol/spec/discussions"
+             class="involve-link" target="_blank" rel="noopener">
+            <span class="involve-link-icon">💬</span>
+            <span class="involve-link-text">
+              <strong>Join the discussion</strong>
+              <span>GitHub Discussions</span>
+            </span>
+          </a>
+          <a href="mailto:hello@egaprotocol.org" class="involve-link">
+            <span class="involve-link-icon">✉️</span>
+            <span class="involve-link-text">
+              <strong>Contact us</strong>
+              <span>hello@egaprotocol.org</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
