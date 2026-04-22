@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 44" role="img" aria-label="EGAProtocol">
+  <title>EGAProtocol</title>
+  <desc>EGAProtocol — the open protocol that brings discipline to AI agents. An open specification by MIRASTACK LABS.</desc>
+  <!-- Three-slat mark: same geometry, adapted for light backgrounds -->
+  <g transform="scale(0.846)">
+    <polygon points="0,52 14,0 24,0 10,52" fill="#009E8C"/>
+    <polygon points="18,52 32,0 42,0 28,52" fill="#D9541A"/>
+    <polygon points="36,52 50,0 60,0 46,52" fill="#8A9299"/>
+  </g>
+  <!-- Wordmark: teal EGAP + dark-neutral rotocol -->
+  <text y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22"><tspan x="63" font-weight="700" letter-spacing="2" fill="#009E8C">EGAP</tspan><tspan font-weight="400" letter-spacing="0.5" fill="#3A4450" dx="-2">rotocol</tspan></text>
+</svg>

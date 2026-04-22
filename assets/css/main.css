@@ -117,7 +117,7 @@ a:hover { color: #2fe8d1; }
   letter-spacing: 0;
   line-height: 1;
 }
-.brand-egap    { font-weight: 700; color: var(--accent); letter-spacing: 2px; }
+.brand-egap    { font-weight: 700; color: var(--accent); letter-spacing: 2px; margin-right: -2px; }
 .brand-rotocol { font-weight: 400; color: var(--text-secondary); letter-spacing: 0.5px; }
 
 .nav-links { display: flex; align-items: center; gap: 4px; }

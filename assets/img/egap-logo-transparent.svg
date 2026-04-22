@@ -7,7 +7,6 @@
     <polygon points="18,52 32,0 42,0 28,52" fill="#FF671F"/>
     <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
   </g>
-  <!-- Wordmark: mark width = 60*0.846 ≈ 51px; + 12 gap = x:63 -->
-  <text x="63" y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22" font-weight="700" letter-spacing="2" fill="#00C9B1">EGAP</text>
-  <text x="132" y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22" font-weight="400" letter-spacing="0.5" fill="#6B7480">rotocol</text>
+  <!-- Wordmark: single <text> with tspan flow so EGAP+rotocol are seamless -->
+  <text y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22"><tspan x="63" font-weight="700" letter-spacing="2" fill="#00C9B1">EGAP</tspan><tspan font-weight="400" letter-spacing="0.5" fill="#6B7480" dx="-2">rotocol</tspan></text>
 </svg>
