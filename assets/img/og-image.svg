@@ -40,7 +40,7 @@
   <!-- Primitive chips — teal, 4px radius, monospace uppercase -->
   <g transform="translate(80, 400)">
     <rect width="106" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
-    <text x="53" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">IDENTITY</text>
+    <text x="53" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUTH</text>
   </g>
   <g transform="translate(200, 400)">
     <rect width="144" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
