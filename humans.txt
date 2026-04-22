@@ -1,0 +1,22 @@
+/* TEAM */
+  Publisher: MIRASTACK LABS Private Limited
+  Site: https://mirastacklabs.ai
+  Contact: hello@egaprotocol.org
+  Location: India
+
+/* PROTOCOL */
+  Name: EGAProtocol (EGAP)
+  Framework: 5AG Governance (Authentication, Authorization, Audit, Approvals, Alerts)
+  Version: 0.1
+  License: Apache-2.0 (spec text also CC-BY-4.0)
+  Spec: https://github.com/egaprotocol/spec
+
+/* THANKS */
+  Open standards communities
+  The broader AI safety and governance community
+
+/* SITE */
+  Built with: Jekyll
+  Hosted on: GitHub Pages
+  Typography: JetBrains Mono
+  Last update: 2026/04/22

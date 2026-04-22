@@ -1,0 +1,21 @@
+{
+  "name": "EGAProtocol",
+  "short_name": "EGAP",
+  "description": "The open wire-level governance standard for enterprise AI agents. 5AG Governance Framework: Authentication, Authorization, Audit, Approvals, Alerts.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#00C9B1",
+  "background_color": "#FFFFFF",
+  "lang": "en-US",
+  "categories": ["productivity", "developer", "business", "reference"],
+  "icons": [
+    {
+      "src": "/assets/img/egap-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

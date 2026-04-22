@@ -1,9 +1,23 @@
 title: EGAProtocol
 tagline: "The open protocol that brings discipline to AI agents."
 description: >-
-  EGAP is an open specification for governed communication between orchestration
-  engines and AI agents — identity, authorization, audit, approvals, and alerts
-  enforced at the wire level. Built for regulated industries.
+  EGAProtocol (EGAP) is the open wire-level governance standard for enterprise AI
+  agents. The 5AG Governance Framework — Authentication, Authorization, Audit,
+  Approvals, Alerts — enforced on every agentic action. Designed for regulated
+  industries: banking, healthcare, defense, government, and critical
+  infrastructure. Complementary to MCP and A2A. Apache 2.0, developed at
+  MIRASTACK LABS.
+keywords: >-
+  EGAProtocol, EGAP, 5AG, 5AG Governance Framework, AI governance, enterprise AI,
+  AI agent protocol, agent governance, AI compliance, AI audit, AI authorization,
+  AI authentication, AI approvals, AI alerts, human-in-the-loop, HITL, agent
+  orchestration, MCP, A2A, Model Context Protocol, Agent to Agent, regulated AI,
+  sovereign AI, air-gapped AI, AI safety, responsible AI, AI wire protocol, open
+  protocol, specification, MIRASTACK LABS, BFSI AI, healthcare AI, defense AI,
+  public sector AI
+locale: en_US
+lang: en
+logo: /assets/img/egap-mark.svg
 
 url: "https://egaprotocol.org"
 baseurl: ""
@@ -14,6 +28,12 @@ google_analytics: G-0N08FGCWLT
 author:
   name: MIRASTACK LABS Private Limited
   email: hello@egaprotocol.org
+  url: https://mirastacklabs.ai
+
+publisher:
+  name: MIRASTACK LABS Private Limited
+  url: https://mirastacklabs.ai
+  logo: https://egaprotocol.org/assets/img/mirastack-logo.svg
 
 # Social
 twitter:
@@ -26,8 +46,8 @@ social:
     - https://github.com/egaprotocol
     - https://twitter.com/egaprotocol
 
-# OG image (place a 1200×630 PNG at this path)
-image: /assets/img/og-image.png
+# OG image (vector 1200×630 SVG)
+image: /assets/img/og-image.svg
 
 # Spec version
 spec_version: "0.1"
@@ -65,3 +85,7 @@ exclude:
   - .github
   - vendor
   - node_modules
+
+# Include dotfile paths (security.txt lives under .well-known/)
+include:
+  - .well-known

@@ -19,9 +19,38 @@
   <!-- Primary Meta -->
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="publisher" content="{{ site.publisher.name }}" />
+  <meta name="application-name" content="{{ site.title }}" />
+  <meta name="theme-color" content="#00C9B1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#090C10" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Robots / crawlers -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="bingbot" content="index, follow" />
+
+  <!-- AI crawler visibility (explicit opt-in for LLM indexing) -->
+  <meta name="GPTBot" content="index, follow" />
+  <meta name="ClaudeBot" content="index, follow" />
+  <meta name="PerplexityBot" content="index, follow" />
+  <meta name="Google-Extended" content="index, follow" />
+  <meta name="CCBot" content="index, follow" />
+  <meta name="anthropic-ai" content="index, follow" />
+
+  <!-- Geo / language -->
+  <meta name="geo.region" content="IN" />
+  <meta name="geo.placename" content="India" />
+  <meta http-equiv="content-language" content="en" />
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
+  <link rel="alternate" hreflang="en" href="{{ page.url | prepend: site.url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ page.url | prepend: site.url }}" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -29,21 +58,43 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="{{ site.image | prepend: site.url }}" />
+  <meta property="og:image:type" content="image/svg+xml" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="EGAProtocol — The open protocol that brings discipline to AI agents. 5AG Governance Framework." />
 
-  <!-- Twitter Card -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@{{ site.twitter.username }}" />
+  <meta name="twitter:creator" content="@{{ site.twitter.username }}" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:image" content="{{ site.image | prepend: site.url }}" />
+  <meta name="twitter:image:alt" content="EGAProtocol — 5AG Governance Framework for AI agents." />
 
-  <!-- Favicon — EGAP three-slat mark -->
+  <!-- Dublin Core (enterprise / academic crawlers) -->
+  <meta name="DC.title" content="{{ site.title }} — {{ site.tagline }}" />
+  <meta name="DC.creator" content="{{ site.author.name }}" />
+  <meta name="DC.publisher" content="{{ site.publisher.name }}" />
+  <meta name="DC.type" content="Specification" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.language" content="en" />
+  <meta name="DC.rights" content="Apache-2.0; docs under CC-BY-4.0" />
+  <meta name="DC.identifier" content="{{ site.url }}" />
+
+  <!-- Favicon / app icons (all SVG) -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/egap-mark.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/egap-mark.svg" />
+  <link rel="mask-icon" href="/assets/img/egap-mark.svg" color="#00C9B1" />
   <link rel="apple-touch-icon" href="/assets/img/egap-mark.svg" />
+  <link rel="shortcut icon" href="/assets/img/egap-mark.svg" />
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- RSS / sitemap discovery -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- JetBrains Mono — MIRASTACK LABS brand font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,7 +104,161 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/assets/css/main.css" />
 
-  <!-- jekyll-seo-tag (canonical, JSON-LD) -->
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://egaprotocol.org/#organization",
+    "name": "EGAProtocol",
+    "alternateName": ["EGAP", "Engine Governed Agents Protocol", "5AG Governance Framework"],
+    "url": "https://egaprotocol.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://egaprotocol.org/assets/img/egap-mark.svg",
+      "width": 512,
+      "height": 512
+    },
+    "description": "EGAProtocol (EGAP) is the open wire-level governance standard for enterprise AI agents. The 5AG Governance Framework enforces Authentication, Authorization, Audit, Approvals, and Alerts on every agentic action.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Organization",
+      "name": "MIRASTACK LABS Private Limited",
+      "url": "https://mirastacklabs.ai"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "MIRASTACK LABS Private Limited",
+      "url": "https://mirastacklabs.ai"
+    },
+    "sameAs": [
+      "https://github.com/egaprotocol",
+      "https://twitter.com/egaprotocol",
+      "https://mirastacklabs.ai"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "general",
+        "email": "hello@egaprotocol.org",
+        "availableLanguage": ["English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "security",
+        "email": "security@egaprotocol.org"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "governance",
+        "email": "governance@egaprotocol.org"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://egaprotocol.org/#website",
+    "url": "https://egaprotocol.org",
+    "name": "EGAProtocol",
+    "description": "The open wire-level governance standard for enterprise AI agents.",
+    "publisher": { "@id": "https://egaprotocol.org/#organization" },
+    "inLanguage": "en-US"
+  }
+  </script>
+
+  <!-- Structured Data: TechArticle — the specification itself -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "EGAProtocol v0.1 Specification — The 5AG Governance Framework for AI Agents",
+    "name": "EGAProtocol v0.1",
+    "description": "An open wire protocol for governed communication between an orchestration Engine and AI Agents. Defines Authentication, Authorization, Audit, Approvals, and Alerts — the 5AG Governance Framework — enforced at the wire level.",
+    "url": "https://egaprotocol.org",
+    "image": "https://egaprotocol.org/assets/img/og-image.svg",
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "MIRASTACK LABS Private Limited",
+      "url": "https://mirastacklabs.ai"
+    },
+    "publisher": { "@id": "https://egaprotocol.org/#organization" },
+    "inLanguage": "en",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "isAccessibleForFree": true,
+    "keywords": "EGAProtocol, EGAP, 5AG, AI governance, enterprise AI, agent protocol, AI compliance, MCP, A2A, regulated AI, sovereign AI",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Enterprise platform teams, AI governance officers, regulators, standards bodies, AI vendors"
+    },
+    "about": [
+      { "@type": "Thing", "name": "AI Governance" },
+      { "@type": "Thing", "name": "Enterprise AI" },
+      { "@type": "Thing", "name": "AI Agent Protocol" },
+      { "@type": "Thing", "name": "Regulatory Compliance" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage — homepage Q&A for rich results -->
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is EGAProtocol?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EGAProtocol (EGAP) is an open wire-level specification that defines how an orchestration engine governs AI agents. It enforces the 5AG Governance Framework — Authentication, Authorization, Audit, Approvals, and Alerts — on every agentic action. EGAP is designed for regulated industries including banking, healthcare, defense, government, and critical infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 5AG Governance Framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "5AG stands for the five A's of Governance for AI agents: Authentication, Authorization, Audit, Approvals, and Alerts. 5AG is the single recognisable framework that EGAProtocol implements at the wire level. Governance metadata is mandatory on every message — no unauthenticated mode, no skip-audit flag, no approval bypass."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does EGAP relate to MCP and A2A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EGAP is complementary to MCP and A2A. Model Context Protocol (MCP) defines how LLMs access tools. Agent-to-Agent (A2A) defines how peer agents exchange messages. EGAP defines how an orchestration engine dispatches, monitors, and audits agent actions — with identity, authorization, approvals, audit, and alerts enforced at the wire level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who should adopt EGAProtocol?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Platform teams operating AI agents in regulated industries, vendors building orchestration engines or agent SDKs, enterprise architects defining organisational AI governance posture, regulators seeking technically verifiable AI governance primitives, and researchers working on accountable human-governed AI systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is EGAProtocol open source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The specification is licensed under Apache License 2.0, with documentation additionally available under CC-BY-4.0. EGAProtocol is developed at MIRASTACK LABS Private Limited as an open standard, governed through the EGAProtocol Improvement Proposal (EIP) process."
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- jekyll-seo-tag (augments with canonical, JSON-LD) -->
   {% seo %}
 </head>
 <body>
