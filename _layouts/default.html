@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Anti-FOUC: restore saved theme before first paint -->
+  <script>(function(){var t=localStorage.getItem('egap-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -76,6 +78,9 @@
         <a href="{{ site.github_org }}" class="nav-link" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:{{ site.contact_email }}" class="nav-link">Contact</a>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour scheme">
+        <span class="theme-icon">&#9790;</span>
+      </button>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -90,16 +95,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <!-- EGAP logo: same three-slat mark + wordmark -->
-          <svg class="egap-footer-logo" viewBox="0 0 244 44" aria-label="EGAProtocol" role="img">
-            <g transform="scale(0.846)">
-              <polygon points="0,52 14,0 24,0 10,52" fill="#00C9B1"/>
-              <polygon points="18,52 32,0 42,0 28,52" fill="#FF671F"/>
-              <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
-            </g>
-            <text x="63" y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22" font-weight="700" letter-spacing="2" fill="#00C9B1">EGAP</text>
-            <text x="132" y="30" font-family="JetBrains Mono, Courier New, monospace" font-size="22" font-weight="400" letter-spacing="0.5" fill="#6B7480">rotocol</text>
-          </svg>
+          <img src="/assets/img/egap-logo-light.svg" alt="EGAProtocol" class="egap-footer-logo logo-light" />
+          <img src="/assets/img/egap-logo-transparent.svg" alt="EGAProtocol" class="egap-footer-logo logo-dark" />
           <p class="footer-tagline">The open protocol that brings discipline to AI agents.</p>
           <!-- MIRASTACK LABS attribution -->
           <span class="footer-mirastack-label">An open specification by</span>
@@ -156,6 +153,28 @@
         toggle.setAttribute('aria-expanded', String(!expanded));
         navLinks.classList.toggle('nav-links--open');
       });
+    }
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeBtn && themeBtn.querySelector('.theme-icon');
+    function isDarkActive() {
+      const t = document.documentElement.getAttribute('data-theme');
+      if (t === 'dark')  return true;
+      if (t === 'light') return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function syncIcon() {
+      if (themeIcon) themeIcon.textContent = isDarkActive() ? '\u2600' : '\u263D';
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const newTheme = isDarkActive() ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('egap-theme', newTheme);
+        syncIcon();
+      });
+      syncIcon();
     }
   </script>
 

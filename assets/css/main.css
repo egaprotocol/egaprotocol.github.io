@@ -4,50 +4,106 @@
    Tokens: brand-tokens.css / visual-identity-guidelines.md
    ============================================================ */
 
-/* ── Brand Tokens ─────────────────────────────────────────── */
+/* ── Brand Tokens — Light mode (default) ─────────────────── */
 :root {
-  /* Backgrounds — mira-bg-dark / mira-bg-alt-dark / mira-card-dark */
-  --bg-primary:    #090C10;
-  --bg-secondary:  #0F1318;
-  --bg-card:       #131920;
-  --bg-card-hover: #1A2130;
+  color-scheme: light;
 
-  /* Text — visual-identity-guidelines.md dark surface values */
-  --text-primary:   #DDE3EA;
-  --text-secondary: #7A8694;
-  --text-muted:     #4A5563;
+  /* Backgrounds */
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F5F7FA;
+  --bg-card:       #FFFFFF;
+  --bg-card-hover: #EFF2F6;
+  --bg-nav:        rgba(255, 255, 255, 0.94);
 
-  /* Accent — mira-accent-primary (teal) */
-  --accent:         #00C9B1;
-  --accent-dim:     rgba(0, 201, 177, 0.10);
-  --accent-glow:    rgba(0, 201, 177, 0.18);
-  --accent-border:  rgba(0, 201, 177, 0.30);
+  /* Text */
+  --text-primary:   #1A2332;
+  --text-secondary: #4A5568;
+  --text-muted:     #8896A4;
 
-  /* Signal — mira-accent-signal (orange) */
-  --signal:         #FF671F;
-  --signal-dim:     rgba(255, 103, 31, 0.10);
-  --signal-border:  rgba(255, 103, 31, 0.25);
+  /* Accent — teal (deeper for contrast on white) */
+  --accent:         #009E8C;
+  --accent-hover:   #007A6E;
+  --accent-dim:     rgba(0, 158, 140, 0.08);
+  --accent-glow:    rgba(0, 158, 140, 0.10);
+  --accent-border:  rgba(0, 158, 140, 0.25);
 
-  /* Neutral steel — mira-accent-neutral */
-  --neutral:        #CED4DA;
+  /* Signal — orange */
+  --signal:         #D9541A;
+  --signal-dim:     rgba(217, 84, 26, 0.08);
+  --signal-border:  rgba(217, 84, 26, 0.20);
 
-  /* Borders — mira-border-dark */
-  --border:         #1C2230;
-  --border-light:   #232e42;
+  /* Neutral steel */
+  --neutral:        #8A9299;
 
-  /* Typography — mira-font-primary */
+  /* Borders */
+  --border:         #E2E8F0;
+  --border-light:   #CBD5E0;
+
+  /* Typography */
   --font-primary: "JetBrains Mono", "Courier New", monospace;
 
-  /* Shape — mira-radius-sm / mira-radius-md */
+  /* Shape */
   --radius-sm: 4px;
   --radius:    8px;
 
-  /* Shadow — mira-shadow-soft */
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  /* Shadow */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 
   /* Layout */
   --max-width:   1100px;
   --section-pad: 96px;
+}
+
+/* ── Dark mode — OS preference ────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-primary:    #090C10;
+    --bg-secondary:  #0F1318;
+    --bg-card:       #131920;
+    --bg-card-hover: #1A2130;
+    --bg-nav:        rgba(9, 12, 16, 0.94);
+    --text-primary:   #DDE3EA;
+    --text-secondary: #7A8694;
+    --text-muted:     #4A5563;
+    --accent:         #00C9B1;
+    --accent-hover:   #2fe8d1;
+    --accent-dim:     rgba(0, 201, 177, 0.10);
+    --accent-glow:    rgba(0, 201, 177, 0.18);
+    --accent-border:  rgba(0, 201, 177, 0.30);
+    --signal:         #FF671F;
+    --signal-dim:     rgba(255, 103, 31, 0.10);
+    --signal-border:  rgba(255, 103, 31, 0.25);
+    --neutral:        #CED4DA;
+    --border:         #1C2230;
+    --border-light:   #232e42;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* ── Dark mode — explicit JS override ────────────────────── */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-primary:    #090C10;
+  --bg-secondary:  #0F1318;
+  --bg-card:       #131920;
+  --bg-card-hover: #1A2130;
+  --bg-nav:        rgba(9, 12, 16, 0.94);
+  --text-primary:   #DDE3EA;
+  --text-secondary: #7A8694;
+  --text-muted:     #4A5563;
+  --accent:         #00C9B1;
+  --accent-hover:   #2fe8d1;
+  --accent-dim:     rgba(0, 201, 177, 0.10);
+  --accent-glow:    rgba(0, 201, 177, 0.18);
+  --accent-border:  rgba(0, 201, 177, 0.30);
+  --signal:         #FF671F;
+  --signal-dim:     rgba(255, 103, 31, 0.10);
+  --signal-border:  rgba(255, 103, 31, 0.25);
+  --neutral:        #CED4DA;
+  --border:         #1C2230;
+  --border-light:   #232e42;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* ── Reset ────────────────────────────────────────────────── */
@@ -63,7 +119,7 @@ body {
 }
 img, svg { display: block; max-width: 100%; }
 a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
-a:hover { color: #2fe8d1; }
+a:hover { color: var(--accent-hover); }
 
 /* ── Accessibility ────────────────────────────────────────── */
 .skip-link {
@@ -84,7 +140,7 @@ a:hover { color: #2fe8d1; }
 /* ── Navigation ───────────────────────────────────────────── */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(9, 12, 16, 0.94);
+  background: var(--bg-nav);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -111,6 +167,10 @@ a:hover { color: #2fe8d1; }
   height: 28px;
   flex-shrink: 0;
 }
+/* Override hardcoded SVG fill attrs with CSS tokens */
+.nav-mark polygon:nth-child(1) { fill: var(--accent); }
+.nav-mark polygon:nth-child(2) { fill: var(--signal); }
+.nav-mark polygon:nth-child(3) { fill: var(--neutral); }
 .nav-wordmark {
   font-family: var(--font-primary);
   font-size: 16px;
@@ -147,6 +207,27 @@ a:hover { color: #2fe8d1; }
   width: 22px; height: 2px;
   background: var(--text-secondary);
   transition: 0.2s;
+}
+
+/* ── Theme Toggle ─────────────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1;
+  width: 34px; height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-border);
 }
 
 /* ── Hero ─────────────────────────────────────────────────── */
@@ -595,8 +676,15 @@ section:last-of-type { border-bottom: none; }
 .egap-footer-logo {
   height: 30px;
   width: auto;
-  display: block;
   margin-bottom: 12px;
+}
+.logo-light { display: block; }
+.logo-dark  { display: none; }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark  { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light { display: none; }
+  :root:not([data-theme="light"]) .logo-dark  { display: block; }
 }
 .footer-tagline {
   font-family: var(--font-primary);
