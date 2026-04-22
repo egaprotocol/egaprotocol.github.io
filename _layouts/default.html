@@ -7,14 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N08FGCWLT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0N08FGCWLT');
-  </script>
+  <!--
+    Privacy-first analytics — Plausible (cookieless, GDPR / DPDP-compliant,
+    EU-hosted). No personal data, no cross-site tracking, no consent banner
+    required. Aligned with EGAProtocol's sovereignty-first positioning.
+    Activate by adding egaprotocol.org in the Plausible dashboard.
+  -->
+  <script defer data-domain="egaprotocol.org" src="https://plausible.io/js/script.js"></script>
 
   <!-- Primary Meta -->
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
@@ -302,13 +301,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/img/egap-logo-light.svg" alt="EGAProtocol" class="egap-footer-logo logo-light" />
-          <img src="/assets/img/egap-logo-transparent.svg" alt="EGAProtocol" class="egap-footer-logo logo-dark" />
+          <img src="/assets/img/egap-logo-light.svg" alt="EGAProtocol — the open wire-level governance standard for AI agents" class="egap-footer-logo logo-light" />
+          <img src="/assets/img/egap-logo-transparent.svg" alt="" aria-hidden="true" class="egap-footer-logo logo-dark" />
           <p class="footer-tagline">The open protocol that brings discipline to AI agents.</p>
           <!-- MIRASTACK LABS attribution -->
           <span class="footer-mirastack-label">An open specification by</span>
           <a href="https://mirastacklabs.ai" target="_blank" rel="noopener" aria-label="MIRASTACK LABS">
-            <img src="/assets/img/mirastack-logo.svg" alt="MIRASTACK LABS" class="footer-mirastack-logo" />
+            <img src="/assets/img/mirastack-logo.svg" alt="MIRASTACK LABS Private Limited" class="footer-mirastack-logo" />
           </a>
         </div>
         <div class="footer-links">
@@ -342,7 +341,9 @@
           <a href="https://github.com/egaprotocol/spec/blob/main/LICENSE" target="_blank" rel="noopener">Apache License 2.0</a>.
           Documentation is additionally available under
           <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY-4.0</a>.
-          This site uses Google Analytics (GA4) for anonymous usage statistics.
+          This site uses <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible</a>
+          &mdash; cookieless, privacy-first analytics. No personal data is collected.
+          See our <a href="/privacy/">Privacy Policy</a>.
           Contact <a href="mailto:hello@egaprotocol.org">hello@egaprotocol.org</a> for legal requests.
         </p>
         <p class="footer-copy">Copyright &copy; 2026 MIRASTACK LABS Private Limited.</p>

@@ -29,8 +29,12 @@ description: >-
          class="btn btn-primary" target="_blank" rel="noopener">
         Read the Specification →
       </a>
-      <a href="https://github.com/egaprotocol"
+      <a href="https://github.com/egaprotocol/spec/blob/main/CONTRIBUTING.md#10-implementing-egaprotocol"
          class="btn btn-secondary" target="_blank" rel="noopener">
+        Implement EGAP
+      </a>
+      <a href="https://github.com/egaprotocol"
+         class="btn btn-ghost" target="_blank" rel="noopener">
         View on GitHub
       </a>
     </div>
@@ -73,7 +77,7 @@ description: >-
           <tr class="egap-row">
             <td><strong>EGAP</strong></td>
             <td>MIRASTACK LABS</td>
-            <td>Engine-to-agent dispatch with governance</td>
+            <td>Engine-to-Agent dispatch with governance</td>
             <td><span class="badge-required">Required</span></td>
           </tr>
         </tbody>
@@ -96,9 +100,10 @@ description: >-
 <section class="primitives" id="five-ag">
   <div class="container">
     <div class="fiveag-eyebrow">
-      <span class="fiveag-mark">5AG</span>
+      <span class="fiveag-mark" aria-label="5AG Governance Framework">5AG</span>
       <span class="fiveag-expand">
-        <strong>5</strong>&nbsp;<em>A</em>uthentication · <em>A</em>uthorization · <em>A</em>udit · <em>A</em>pprovals · <em>A</em>lerts &nbsp;—&nbsp; <strong>G</strong>overnance
+        The <strong>5 A&rsquo;s</strong> of <strong>G</strong>overnance for agents &mdash;
+        <em>Authentication</em> &middot; <em>Authorization</em> &middot; <em>Audit</em> &middot; <em>Approvals</em> &middot; <em>Alerts</em>.
       </span>
     </div>
     <p class="section-label">What EGAP Provides</p>
@@ -110,27 +115,27 @@ description: >-
     </p>
     <div class="primitives-grid">
       <div class="primitive-card">
-        <div class="primitive-icon">🔑</div>
+        <div class="primitive-icon" aria-hidden="true">🔑</div>
         <h3>Authentication</h3>
         <p>Cryptographically verifiable identity for every user, session, and agent. No anonymous dispatch.</p>
       </div>
       <div class="primitive-card">
-        <div class="primitive-icon">🛡️</div>
+        <div class="primitive-icon" aria-hidden="true">🛡️</div>
         <h3>Authorization</h3>
         <p>Role-based authorization scoped to the minimum required privilege. Permission scope carried on every message.</p>
       </div>
       <div class="primitive-card">
-        <div class="primitive-icon">📋</div>
+        <div class="primitive-icon" aria-hidden="true">📋</div>
         <h3>Audit</h3>
         <p>Immutable audit trails following OpenTelemetry semantic conventions. Every decision is recorded.</p>
       </div>
       <div class="primitive-card">
-        <div class="primitive-icon">✋</div>
+        <div class="primitive-icon" aria-hidden="true">✋</div>
         <h3>Approvals</h3>
         <p>Mandatory human-in-the-loop for every destructive or irreversible action. A protocol primitive, not an app convention.</p>
       </div>
       <div class="primitive-card">
-        <div class="primitive-icon">🔔</div>
+        <div class="primitive-icon" aria-hidden="true">🔔</div>
         <h3>Alerts</h3>
         <p>Operational alerts when an agent deviates from expected behavior. Anomaly detection at the protocol boundary.</p>
       </div>
@@ -192,7 +197,7 @@ description: >-
             <span class="spec-binding-tag">Binding&nbsp;2</span>
             <h4>gRPC over HTTP/2</h4>
           </div>
-          <p>High-throughput, strongly-typed, streaming-native. Recommended for dense intra-datacentre engine-to-agent fabrics.</p>
+          <p>High-throughput, strongly-typed, streaming-native. Recommended for dense intra-datacentre Engine-to-Agent fabrics.</p>
         </div>
       </div>
     </div>
@@ -284,7 +289,7 @@ description: >-
     </div>
     <p class="ecosystem-note">
       An engine can speak <strong>MCP</strong> to fetch tools, an agent can speak
-      <strong>A2A</strong> to coordinate with peers, and the engine-to-agent dispatch,
+      <strong>A2A</strong> to coordinate with peers, and the Engine-to-Agent dispatch,
       approval flow, and audit trail use <strong>EGAP</strong>.
     </p>
   </div>
@@ -301,41 +306,103 @@ description: >-
     </p>
     <div class="audience-grid">
       <div class="audience-card">
-        <div class="audience-icon">🏦</div>
+        <div class="audience-icon" aria-hidden="true">🏦</div>
         <div>
           <h4>Platform Teams</h4>
           <p>Operating AI agents in BFSI, healthcare, defense, public sector, and critical infrastructure where governance is not optional.</p>
         </div>
       </div>
       <div class="audience-card">
-        <div class="audience-icon">🔧</div>
+        <div class="audience-icon" aria-hidden="true">🔧</div>
         <div>
           <h4>Vendors</h4>
           <p>Building orchestration engines, agent SDKs, or agent marketplaces who need a governance contract with their customers' compliance teams.</p>
         </div>
       </div>
       <div class="audience-card">
-        <div class="audience-icon">🏗️</div>
+        <div class="audience-icon" aria-hidden="true">🏗️</div>
         <div>
           <h4>Enterprise Architects</h4>
           <p>Defining organisational AI governance posture and needing an open standard to anchor it — one that survives vendor consolidation.</p>
         </div>
       </div>
       <div class="audience-card">
-        <div class="audience-icon">⚖️</div>
+        <div class="audience-icon" aria-hidden="true">⚖️</div>
         <div>
           <h4>Regulators &amp; Standards Bodies</h4>
           <p>Seeking technically verifiable, evidence-based AI governance primitives with cryptographic certainty and immutable audit records.</p>
         </div>
       </div>
       <div class="audience-card">
-        <div class="audience-icon">🔬</div>
+        <div class="audience-icon" aria-hidden="true">🔬</div>
         <div>
           <h4>Researchers &amp; Practitioners</h4>
           <p>Working on accountable, explainable, human-governed AI systems who need a concrete governance wire protocol to reason about.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── Roadmap ───────────────────────────────────────────── -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <p class="section-label">What&rsquo;s Next</p>
+    <h2 class="section-title">Roadmap to v1.0.</h2>
+    <p class="section-lead">
+      EGAProtocol is a living open standard. Every milestone below is tracked on
+      <a href="https://github.com/egaprotocol/spec/milestones" target="_blank" rel="noopener">GitHub Milestones</a>
+      and advanced through the
+      <a href="https://github.com/egaprotocol/spec/blob/main/GOVERNANCE.md" target="_blank" rel="noopener">EIP</a>
+      process.
+    </p>
+    <ol class="roadmap-list" role="list">
+      <li class="roadmap-item is-current">
+        <div class="roadmap-when">
+          <span class="roadmap-version">v0.1</span>
+          <span class="roadmap-date">Q2 2026</span>
+        </div>
+        <div class="roadmap-body">
+          <h3>Working Draft <span class="roadmap-status">shipped</span></h3>
+          <p>Normative specification, 5AG Governance Framework, two transport bindings, schema-first message envelope, conformance criteria.</p>
+        </div>
+      </li>
+      <li class="roadmap-item">
+        <div class="roadmap-when">
+          <span class="roadmap-version">v0.2</span>
+          <span class="roadmap-date">Q3 2026</span>
+        </div>
+        <div class="roadmap-body">
+          <h3>Reference Implementation <span class="roadmap-status roadmap-status-wip">planned</span></h3>
+          <p>Open-source Go reference engine and agent SDK. Conformance-tested JSON-RPC and gRPC bindings. Published under <code>egaprotocol/core</code>.</p>
+        </div>
+      </li>
+      <li class="roadmap-item">
+        <div class="roadmap-when">
+          <span class="roadmap-version">v0.3</span>
+          <span class="roadmap-date">Q4 2026</span>
+        </div>
+        <div class="roadmap-body">
+          <h3>Conformance Test Suite <span class="roadmap-status roadmap-status-wip">planned</span></h3>
+          <p>Executable conformance harness, identity/authorization/audit test vectors, interoperability matrix for first-wave implementers.</p>
+        </div>
+      </li>
+      <li class="roadmap-item">
+        <div class="roadmap-when">
+          <span class="roadmap-version">v1.0</span>
+          <span class="roadmap-date">2027</span>
+        </div>
+        <div class="roadmap-body">
+          <h3>Ratification &amp; Certification <span class="roadmap-status roadmap-status-future">targeted</span></h3>
+          <p>Frozen wire contract. <strong>EGAProtocol Certified</strong> program for compliant engines and agents. Regulatory attestation guide for BFSI, healthcare, defense, and public sector.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="roadmap-note">
+      Dates are targets, not guarantees. An open standard ships when it is ready.
+      <a href="https://github.com/egaprotocol/spec/discussions" target="_blank" rel="noopener">Join the discussion</a>
+      or <a href="mailto:hello@egaprotocol.org">subscribe for announcements</a>.
+    </p>
   </div>
 </section>
 

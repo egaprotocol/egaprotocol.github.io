@@ -23,7 +23,11 @@ url: "https://egaprotocol.org"
 baseurl: ""
 
 # Google Analytics
-google_analytics: G-0N08FGCWLT
+# Privacy-first analytics: Plausible (cookieless, GDPR / DPDP-compliant).
+# Loaded directly in _layouts/default.html — no Jekyll plugin needed.
+analytics:
+  provider: plausible
+  domain: egaprotocol.org
 
 author:
   name: MIRASTACK LABS Private Limited
