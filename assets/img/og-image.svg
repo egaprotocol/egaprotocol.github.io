@@ -30,9 +30,8 @@
     <polygon points="36,52 50,0 60,0 46,52" fill="#CED4DA"/>
   </g>
 
-  <!-- Wordmark — "EGAP" teal bold + "rotocol" muted -->
-  <text x="262" y="236" font-family="JetBrains Mono, Courier New, monospace" font-size="72" font-weight="700" fill="#00C9B1" letter-spacing="4">EGAP</text>
-  <text x="568" y="236" font-family="JetBrains Mono, Courier New, monospace" font-size="72" font-weight="400" fill="#6B7480" letter-spacing="1">rotocol</text>
+  <!-- Wordmark — "EGAP" teal bold + "rotocol" muted, seamless via tspan -->
+  <text y="236" font-family="JetBrains Mono, Courier New, monospace" font-size="72"><tspan x="262" font-weight="700" fill="#00C9B1" letter-spacing="4">EGAP</tspan><tspan font-weight="400" fill="#6B7480" letter-spacing="1" dx="-4">rotocol</tspan></text>
 
   <!-- Tagline -->
   <text x="80" y="300" font-family="JetBrains Mono, Courier New, monospace" font-size="22" fill="#7A8694" font-weight="400" letter-spacing="0.5">The open protocol that brings discipline to AI agents.</text>
