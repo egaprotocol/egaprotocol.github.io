@@ -17,6 +17,29 @@
 
   <!-- Primary Meta -->
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <!-- SEO: Primary -->
+  <meta name="description" content="{{ page.description | default: site.description | default: 'EGAP defines the governance layer for AI agent systems through the 5AG framework — Authentication, Authorization, Audit, Approvals, and Alerts — enforced at the wire level on every agentic action.' }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph (LinkedIn, Facebook, WhatsApp, Slack) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title | default: 'EGAProtocol' }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | default: 'EGAProtocol — The open governance protocol for AI agents' }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | default: 'EGAP enforces Authentication, Authorization, Audit, Approvals, and Alerts at the wire level on every agentic action. Open spec. Apache 2.0.' }}">
+  <!-- TODO: Replace egap-og-image.png with a 1200x630px image before deploying -->
+  <meta property="og:image" content="{{ '/assets/img/egap-og-image.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="EGAProtocol — The open wire-level governance standard for AI agents">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | default: 'EGAProtocol — The open governance protocol for AI agents' }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | default: 'EGAP enforces 5AG governance at the wire level. Open spec. Apache 2.0.' }}">
+  <meta name="twitter:image" content="{{ '/assets/img/egap-og-image.png' | absolute_url }}">
+  <meta name="twitter:image:alt" content="EGAProtocol — The open wire-level governance standard for AI agents">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="keywords" content="{{ site.keywords }}" />
   <meta name="author" content="{{ site.author.name }}" />
