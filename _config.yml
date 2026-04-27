@@ -1,12 +1,9 @@
 title: EGAProtocol
 tagline: "The open protocol that brings discipline to AI agents."
 description: >-
-  EGAProtocol (EGAP) is the open wire-level governance standard for enterprise AI
-  agents. The 5AG Governance Framework — Authentication, Authorization, Audit,
-  Approvals, Alerts — enforced on every agentic action. Designed for regulated
-  industries: banking, healthcare, defense, government, and critical
-  infrastructure. Complementary to MCP and A2A. Apache 2.0, developed at
-  MIRASTACK LABS.
+  EGAProtocol (EGAP) is the open wire-level governance standard for AI agents,
+  enforcing Authentication, Authorization, Audit, Approvals, and Alerts on every
+  action.
 keywords: >-
   EGAProtocol, EGAP, 5AG, 5AG Governance Framework, AI governance, enterprise AI,
   AI agent protocol, agent governance, AI compliance, AI audit, AI authorization,
