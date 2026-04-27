@@ -50,8 +50,8 @@ social:
     - https://github.com/egaprotocol
     - https://twitter.com/egaprotocol
 
-# OG image (vector 1200×630 SVG)
-image: /assets/img/og-image.svg
+# OG image (1200x630 PNG)
+image: /assets/img/egap-og-image.png
 
 # Spec version
 spec_version: "0.1"

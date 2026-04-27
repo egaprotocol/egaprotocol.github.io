@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <radialGradient id="glow" cx="40%" cy="30%" r="55%">
-      <stop offset="0%" stop-color="rgba(0,201,177,0.14)"/>
-      <stop offset="100%" stop-color="rgba(0,201,177,0)"/>
+      <stop offset="0%" stop-color="#00C9B1" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#00C9B1" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <!-- Background — mira-bg-dark -->
@@ -20,7 +20,7 @@
   </g>
 
   <!-- Badge — signal orange -->
-  <rect x="80" y="72" width="210" height="32" rx="4" fill="rgba(255,103,31,0.10)" stroke="rgba(255,103,31,0.25)" stroke-width="1"/>
+  <rect x="80" y="72" width="210" height="32" rx="4" fill="#FF671F" fill-opacity="0.10" stroke="#FF671F" stroke-opacity="0.25" stroke-width="1"/>
   <text x="185" y="94" font-family="JetBrains Mono, Courier New, monospace" font-size="12" font-weight="700" fill="#FF671F" text-anchor="middle" letter-spacing="2">EGAP v0.1 · DRAFT</text>
 
   <!-- Three-slat mark — scale(1.0): height=52px matches JetBrains Mono cap-height at 72px -->
@@ -39,23 +39,23 @@
 
   <!-- Primitive chips — teal, 4px radius, monospace uppercase -->
   <g transform="translate(80, 400)">
-    <rect width="106" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <rect width="106" height="28" rx="4" fill="#00C9B1" fill-opacity="0.08" stroke="#00C9B1" stroke-opacity="0.30" stroke-width="1"/>
     <text x="53" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUTH</text>
   </g>
   <g transform="translate(200, 400)">
-    <rect width="144" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <rect width="144" height="28" rx="4" fill="#00C9B1" fill-opacity="0.08" stroke="#00C9B1" stroke-opacity="0.30" stroke-width="1"/>
     <text x="72" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUTHORIZATION</text>
   </g>
   <g transform="translate(358, 400)">
-    <rect width="84" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <rect width="84" height="28" rx="4" fill="#00C9B1" fill-opacity="0.08" stroke="#00C9B1" stroke-opacity="0.30" stroke-width="1"/>
     <text x="42" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">AUDIT</text>
   </g>
   <g transform="translate(456, 400)">
-    <rect width="110" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <rect width="110" height="28" rx="4" fill="#00C9B1" fill-opacity="0.08" stroke="#00C9B1" stroke-opacity="0.30" stroke-width="1"/>
     <text x="55" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">APPROVALS</text>
   </g>
   <g transform="translate(580, 400)">
-    <rect width="84" height="28" rx="4" fill="rgba(0,201,177,0.08)" stroke="rgba(0,201,177,0.30)" stroke-width="1"/>
+    <rect width="84" height="28" rx="4" fill="#00C9B1" fill-opacity="0.08" stroke="#00C9B1" stroke-opacity="0.30" stroke-width="1"/>
     <text x="42" y="19" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#00C9B1" text-anchor="middle" font-weight="700" letter-spacing="1.5">ALERTS</text>
   </g>
 
