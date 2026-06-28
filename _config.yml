@@ -54,6 +54,7 @@ image: /assets/img/egap-og-image.png
 spec_version: "0.1"
 spec_status: "Working Draft"
 spec_url: "https://github.com/egaprotocol/spec/blob/main/SPEC.md"
+spec_page: "/spec/"
 github_org: "https://github.com/egaprotocol"
 contact_email: "hello@egaprotocol.org"
 
